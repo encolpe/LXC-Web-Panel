@@ -1,3 +1,13 @@
+Version 0.9.1 (05-05-2017)
+===========================================================
+
+Added Features
+-----------------------
+
+* Show memory label colors as percentile when CT's memlimit is set
+* Workaround lxc-ls command output inconsistency
+
+
 Version 0.9 (31-01-2016)
 ===========================================================
 
