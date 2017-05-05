@@ -70,13 +70,13 @@ def debian():
     local('sudo rm ../lwp_*.changes')
 
     # release package on packagecloud.io
-    local('package_cloud push claudyus/LXC-Web-Panel/ubuntu/precise gh-pages/debian/{}'.format(package))
-    local('package_cloud push claudyus/LXC-Web-Panel/ubuntu/trusty gh-pages/debian/{}'.format(package))
+    local('package_cloud push encolpe/LXC-Web-Panel/ubuntu/zesty gh-pages/debian/{}'.format(package))
+    local('package_cloud push encolpe/LXC-Web-Panel/debian/jessie gh-pages/debian/{}'.format(package))
 
 @task
 def clone():
     if not os.path.exists('gh-pages'):
-        local('git clone git@github.com:claudyus/LXC-Web-Panel.git gh-pages')
+        local('git clone git@github.com:encolpe/LXC-Web-Panel.git gh-pages')
 
     with lcd('gh-pages'):
         local('git checkout origin/gh-pages -b gh-pages || true')
