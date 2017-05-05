@@ -58,6 +58,8 @@ def debian():
     with open('lwp/version', 'w') as fd:
         fd.write('{}\n'.format(version))
 
+    build_assets()
+
     # the debian changelog is not stored on GIT and rebuilt each time
     generate_debian_changelog(version)
     local('sudo dpkg-buildpackage -us -uc -b')
@@ -101,7 +103,6 @@ def build_assets():
 @task
 def site():
     clone()
-    build_assets()
     debian()
     version = local('git describe --tag', capture=True)
     local('DEB_PKG=lwp_{}_all.deb make -C gh-pages/'.format(version))
