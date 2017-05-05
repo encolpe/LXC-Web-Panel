@@ -23,6 +23,9 @@ build
 # Pycharm conf
 .idea/
 
+*.swp
+*.ropeproject/
+
 # bower
 jsbuild/node_modules/*
 jsbuild/bower_components/*
