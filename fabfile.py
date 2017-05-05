@@ -26,7 +26,7 @@ def generate_debian_changelog(version):
     """
     with open('debian/changelog', 'w') as f:
         f.write('lwp ({0}) unstable; urgency=low\n\n  * LWP release {0}\n\n'.format(version))
-        f.write(' -- Claudio Mignanti <c.mignanti@gmail.com>  {}\n'.format(generate_package_date()))
+        f.write(' -- Encolpe DEGOUTE <encolpe@colpi.org>  {}\n'.format(generate_package_date()))
 
 
 def get_version_from_debian_changelog():
